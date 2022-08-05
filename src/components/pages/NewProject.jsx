@@ -19,7 +19,7 @@ export function NewProject() {
     .then((response) => response.json)
     .then((data) => {
       console.log(data);      
-      history("/projects", { message: "Projeto criado com sucesso!"})
+      history("/projects", {state: { message: "Projeto criado com sucesso!"} });
     })
     .catch((err) => console.log(err))
   }
