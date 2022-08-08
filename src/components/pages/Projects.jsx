@@ -5,12 +5,14 @@ import { Message } from "../layout/Message";
 import { Container } from "../layout/Container";
 import { LinkButton } from "../layout/LinkButton";
 import { ProjectCard } from "../project/ProjectCard";
+import { Loading } from "../layout/Loading";
 
 import styles from "./styles/Projects.module.css";
 
 export function Projects() {
 
   const [projects, setProjects] = useState([]);
+  const [removeLoading, setRemoveLoading] = useState(false);
 
   const location = useLocation();
   let message = "";
@@ -30,7 +32,7 @@ export function Projects() {
     .then((response) => response.json())
     .then((data) => {
       setProjects(data);
-      console.log();
+      setRemoveLoading(true);
     }).catch((err) => console.log(err));
 
   }, []);
@@ -45,8 +47,9 @@ export function Projects() {
         message && <Message msg={message} type={"success"} />
       }
       <Container customClass="start">
-        {
-          projects.length > 0 ? (
+        {          
+          projects.length > 0 && (          
+
             projects.map((project) => (
               <ProjectCard 
                   name={project.name}
@@ -55,11 +58,14 @@ export function Projects() {
                   category={project.category.name}
                   key={project.id}
               />
-            ))
-          ) : (
-            <p>Não nenhum projeto no momento.</p>
-          )
-        }
+            ))) 
+        } 
+
+        { !removeLoading && <Loading />} 
+
+        { removeLoading && projects.length === 0 && (
+          <p>Não há nenhum projeto no momento.</p>
+        )}      
       </Container>
     </div>
   );
