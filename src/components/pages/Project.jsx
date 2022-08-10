@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 
 import { Loading } from "../layout/Loading";
 import { Container } from "../layout/Container";
+import { ProjectForm } from "../project/ProjectForm";
+import { Message } from "../layout/Message";
 
 import styles from "./styles/Project.module.css";
 
@@ -12,6 +14,8 @@ export function Project() {
 
   const [project, setProject] = useState([]);
   const [showProjectForm, setShowProjectForm] = useState(false);
+  const [message, setMessage] = useState();
+  const [type, setType] = useState();
 
   useEffect(() => {
 
@@ -29,6 +33,31 @@ export function Project() {
 
   }, [id]);
 
+  function editPost(project) {
+
+    if (project.budget < project.cost) {
+      setMessage("O orçamento não pode ser menor que o custo do projeto");
+      setType("error");
+      return false;
+    }
+
+    fetch(`http://localhost:5000/projects/${project.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(project),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      setProject(data);
+      setShowProjectForm(false);
+      setMessage("Projeto atualizado com sucesso");
+      setType("success");
+    })
+    .catch((err) => { console.log(err)})
+  }
+
   function toggleProjectForm() {
     setShowProjectForm(!showProjectForm);
   }
@@ -40,13 +69,14 @@ export function Project() {
         project.name ? ( 
             <div className={styles.project_details}>
               <Container customClass="column">
+                { message && <Message msg={message} type={type} />}
                 <div className={styles.details_container}>
                   <h1>Projeto: {project.name}</h1>
                   <button className={styles.btn} onClick={toggleProjectForm}>
-                    { !showProjectForm ? "fechar" : "Editar projeto" }
+                    { !showProjectForm ? "Editar projeto" : "fechar" }
                   </button>
                   {
-                    showProjectForm ? (
+                    !showProjectForm ? (
                      <div className={styles.project_info}>
                       <p>
                         <span>Categoria:</span> {project.category.name}
@@ -60,7 +90,11 @@ export function Project() {
                      </div>
                     ) : (
                      <div className={styles.project_info}>
-                       <p>Formulário</p>
+                       <ProjectForm
+                          handleSubmit={editPost}
+                          btnText="Concluir Edição"
+                          projectData={project}
+                       />
                      </div>
                     )
                   }
