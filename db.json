@@ -12,11 +12,11 @@
       "id": 1
     },
     {
-      "name": "teste 94",
-      "budget": "1800",
+      "name": "teste 851",
+      "budget": "2300",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": 0,
       "services": [],
