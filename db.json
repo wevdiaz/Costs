@@ -18,13 +18,25 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 150,
+      "cost": 450,
       "services": [
         {
           "name": "analise",
           "cost": "150",
           "description": "testando serviço",
           "id": "0a201806-3433-4feb-8554-5322f94e178d"
+        },
+        {
+          "name": "serviço de cards",
+          "cost": "250",
+          "description": "testando serviço",
+          "id": "2e074e44-5cb8-4265-a8c1-eacb3683da86"
+        },
+        {
+          "name": "Criar Modal",
+          "cost": "50",
+          "description": "criar um modal na página",
+          "id": "d308e9e0-b296-412e-8b49-023339dd4c52"
         }
       ],
       "id": 2
