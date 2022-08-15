@@ -18,13 +18,19 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 150,
+      "cost": 600,
       "services": [
         {
           "name": "analise",
           "cost": "150",
           "description": "testando serviço",
           "id": "0a201806-3433-4feb-8554-5322f94e178d"
+        },
+        {
+          "name": "Desenho Layout",
+          "cost": "450",
+          "description": "Planejamento de layout",
+          "id": "602aa805-7419-42a2-b53d-f05e53168583"
         }
       ],
       "id": 2
