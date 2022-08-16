@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# <img src="https://github.com/wevdiaz/Costs/blob/main/src/imgs/costs_logo.png?raw=true" width="30px" height="30px" /> - Cost
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***
 
-## Available Scripts
+<p align="center">  
+      <a>
+          <img src="https://img.shields.io/github/repo-size/wevdiaz/Costs?color=%231ABC9C">      
+      </a>  
+      <a>
+          <img src="https://img.shields.io/github/license/wevdiaz/Costs?color=%231ABC9C">        
+      </a>      
+      <a>
+          <img src="https://img.shields.io/github/languages/count/wevdiaz/Costs?color=%231ABC9C">       
+      </a>      
+      <a>          
+          <img alt="Diazz" src="https://img.shields.io/badge/made%20by-Diazz-Costs?color=%231ABC9C"> 
+      </a>      
+  </p> 
 
-In the project directory, you can run:
+<p align="center">
+    <a href="#speech_balloon-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#hammer_and_wrench-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#gear-requesitos">Requesitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#scroll-licença">Licença</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+</p>
 
-### `npm start`
+### :speech_balloon: Sobre
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Aplicação sendo desenvolvida em React, com conceitos básicos da biblioteca e um projeto para colocar em prática o aprendizado. Curso realizado pelo instrutor **Matheus Battisti**. Neste projeto é abordado hooks e a criação de um CRUD simples utilizando usando um arquivo JSON para guardar os dados.
+ 
+ ### :hammer_and_wrench: Tecnologias
+ 
+ * HTML
+ * CSS
+ * React JS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### :gear: Requesitos
 
-### `npm test`
+Para rodar a página
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Baixe para sua máquina
+* npm install - *para dependência do projeto*
+* npm start  e npm run server - *para rodar aplicação*
 
-### `npm run build`
+### :scroll: Licença
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Esse projeto está sob a licença [MIT](https://github.com/wevdiaz/Costs/blob/main/LICENSE)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Projeto sendo desenvolvido com :blue_heart: e animação  :star_struck:.
